@@ -1,0 +1,5 @@
+{
+    "eslint.workingDirectories": [
+		"./kanban-app"
+	]
+}
