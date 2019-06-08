@@ -32,5 +32,7 @@ module.exports = {
             "error",
             4
         ],
+        "eol-last": 0,
+        "space-before-function-paren": 0
     }
 }

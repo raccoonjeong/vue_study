@@ -1,5 +1,17 @@
 {
-    "eslint.workingDirectories": [
+	"eslint.workingDirectories": [
 		"./kanban-app"
-	]
+	],
+	// Set the default 
+	// "editor.formatOnSave": false, 
+	// Enable per-language 
+	// "[javascript]": { "editor.formatOnSave": false }
+	// "editor.formatOnSave": true,
+	// "[javascript]": {
+	// 	"editor.formatOnSave": true
+	// },
+	// "vetur.format.defaultFormatter.js": "vscode-typescript",
+	// "prettier.eslintIntegration": true,
+	// "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	// "typescript.format.insertSpaceBeforeFunctionParenthesis": true
 }
