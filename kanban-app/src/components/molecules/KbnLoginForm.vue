@@ -1,5 +1,5 @@
 <template>
-    <form novalidate>>
+    <form novalidate>
         <div class = "form-item">
             <label for="email">이메일 주소</label>
             <input id="email"
@@ -28,7 +28,7 @@
         </div>
         <div class="form-actions">
             <KanButton
-                :disabled="disabledLoginAction"
+                :disabled="disableLoginAction"
                 @click="handleClick"
                 >
                 로그인
