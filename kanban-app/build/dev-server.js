@@ -7,4 +7,33 @@ module.exports = app => {
     app.use(bodyParser.json())
 
     // TODO: 이 부분 뒤로 API구현을 추가
+    // 사용자 정보
+    const users = {
+        'foo@domain.com': {
+            password: '12345678',
+            userId: 1,
+            token: '1234567890abcdef'
+        }
+    }
+
+    // 로그인 API 엔드 포인트는 '/auth/login'
+    app.post('/auth/login', (req, res) => {
+        const {
+            email,
+            password
+        } = req.body
+        const user = users[email]
+        if (user) {
+            if (user.password !== password) {
+                console.log(1);
+                res.status(401).json({ message: '로그인에 실패하였습니다.' })
+            } else {
+                console.log(2);
+                res.json({ userId: user.userId, token: user.token })
+            }
+        } else {
+            console.log(3);
+            res.status(404).json({ message: '등록된 사용자가 아닙니다.' })
+        }
+    })
 }
